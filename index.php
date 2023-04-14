@@ -145,8 +145,8 @@
           <br>
           <br>
               <div class="photo_pp">
-                <img src="Img/<?=$data_proj['photo1']?>" alt="photo_1" width=400px>
-                <img src="Img/<?=$data_proj['photo2']?>" alt="photo_2" width=400px>
+                <img src="./Img/<?=$data_proj['photo1']?>" alt="photo_1" width=400px>
+                <img src="./Img/<?=$data_proj['photo2']?>" alt="photo_2" width=400px>
               </div>
         
       </section>
