@@ -147,10 +147,7 @@
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
-  </div>
-  <section class="content">
+      <section class="content">
  <div class="container-fluid">
  <!-- Small boxes (Stat box) -->
  <div class="row">
@@ -198,6 +195,10 @@
 
  </div><!-- /.container-fluid -->
 </section>
+    </div>
+    <!-- /.content-header -->
+  </div>
+ 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
