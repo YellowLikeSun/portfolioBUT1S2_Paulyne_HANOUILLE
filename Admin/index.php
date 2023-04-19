@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <?php
-require('Modele/connect.php');
-  if (!isset($_SESSION['isUserLoggedIn'])){
- echo "<script> window.location.href='./Admin/login.php' </script>";
- }
-?>
+  
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
