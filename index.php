@@ -145,8 +145,8 @@
           <br>
           <br>
               <div class="photo_pp">
-                <img src="./Img/<?=$data_proj['photo1']?>" alt="photo_1" width=400px>
-                <img src="./Img/<?=$data_proj['photo2']?>" alt="photo_2" width=400px>
+                <img src="Img/<?=$data_proj['photo1']?>" alt="photo_1" width=400px>
+                <img src="Img/<?=$data_proj['photo2']?>" alt="photo_2" width=400px>
               </div>
         
       </section>
@@ -218,28 +218,28 @@
   ?>
       <a href="https://twitter.com/YellowVLR"
         ><img
-          src="<?=$data_foot['logotwitwi']?>"
+          src="Img/<?=$data_foot['logotwitwi']?>"
           width="60%"
           title="comptetwitter"
           alt="lien au compte twitter"
       /></a>
       <a href="instagram.com"
         ><img
-          src="<?=$data_foot['logoinsta']?>"
+          src="Img/<?=$data_foot['logoinsta']?>"
           width="25%"
           title="compteinstagram"
           alt="lien au compte instagram"
       /></a>
       <a href="https://discord.gg/Djcr6VZaRn"
         ><img
-          src="<?=$data_foot['logodidi']?>"
+          src="Img/<?=$data_foot['logodidi']?>"
           width="50%"
           title="serveurdiscord"
           alt="lien au serveur discord"
       /></a>
       <a href="linkedin.com"
         ><img
-          src="<?=$data_foot['logolinkedin']?>"
+          src="Img/<?=$data_foot['logolinkedin']?>"
           width="13%"
           title="comptelikedin"
           alt="lien au compte linkedin"
