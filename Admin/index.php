@@ -150,7 +150,54 @@
     </div>
     <!-- /.content-header -->
   </div>
- 
+  <section class="content">
+ <div class="container-fluid">
+ <!-- Small boxes (Stat box) -->
+ <div class="row">
+
+ <form method=”post” action=”update_section_visibility.php”>
+ <div class="form-check">
+ <input class="form-check-input" type="checkbox" value="1" id="flexCheck1">
+ <label class="form-check-label" name="hiome” for="flexCheck1">
+ Home
+ </label>
+ </div>
+ <div class="form-check">
+ <input class="form-check-input" type="checkbox" value="1" id="flexCheck2">
+ <label class="form-check-label" name="about" for="flexCheck2">
+ About
+ </label>
+ </div>
+ <div class="form-check">
+ <input class="form-check-input" type="checkbox" value="1" id="flexCheck3">
+ <label class="form-check-label" name="resume" for="flexCheck3">
+ Resume
+ </label>
+ </div>
+ <div class="form-check">
+ <input class="form-check-input" type="checkbox" value="1" id="flexCheck4">
+ <label class="form-check-label" name="services" for="flexCheck4">
+ Services
+ </label>
+ </div>
+ <div class="form-check">
+ <input class="form-check-input" type="checkbox" value="1" id="flexCheck5">
+ <label class="form-check-label" name="portfolio" for="flexCheck5">
+ Portfolio
+ </label>
+ </div>
+ <div class="form-check">
+ <input class="form-check-input" type="checkbox" value="1" id="flexCheck6">
+ <label class="form-check-label" name='contact' for="flexCheck6">
+ Contact
+ </label>
+ </div>
+ <input type="submit" class="btn btn-sm btn-primary" name="update-section" value="Save">
+ </form>
+ </div>
+
+ </div><!-- /.container-fluid -->
+</section>
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
