@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-  
+<?php
+ 
+  $pdo= require './Modele/connect.php';
+  $sql='SELECT * FROM  navbarre';
+  $statement = $pdo ->query($sql);
+  $data_nav=$statement->fetchAll(PDO::FETCH_ASSOC);
+   //print_r($data);
+   //exit; 
+  ?>
 
   <head>
     <meta charset="UTF-8" />
