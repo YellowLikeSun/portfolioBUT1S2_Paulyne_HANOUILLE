@@ -206,7 +206,9 @@
         </div>
       </section>
     </main>
-     <?php
+     
+    <footer class="foot">
+    <?php
         $pdo= require './Modele/connect.php';
   $sql='SELECT * FROM footer';
   $statement = $pdo ->query($sql);
@@ -214,7 +216,6 @@
    //print_r($data_foot);
    //exit; 
   ?>
-    <footer class="foot">
       <a href="https://twitter.com/YellowVLR"
         ><img
           src="<?=$data_foot['logotwitwi']?>"
