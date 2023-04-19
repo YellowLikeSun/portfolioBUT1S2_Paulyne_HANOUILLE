@@ -156,36 +156,24 @@
  <div class="form-check">
  <input class="form-check-input" type="checkbox" value="1" id="flexCheck1">
  <label class="form-check-label" name="hiome” for="flexCheck1">
- Home
+ Accueil
  </label>
  </div>
  <div class="form-check">
  <input class="form-check-input" type="checkbox" value="1" id="flexCheck2">
  <label class="form-check-label" name="about" for="flexCheck2">
- About
+ Compétences
  </label>
  </div>
  <div class="form-check">
  <input class="form-check-input" type="checkbox" value="1" id="flexCheck3">
  <label class="form-check-label" name="resume" for="flexCheck3">
- Resume
+ Projets
  </label>
  </div>
  <div class="form-check">
  <input class="form-check-input" type="checkbox" value="1" id="flexCheck4">
  <label class="form-check-label" name="services" for="flexCheck4">
- Services
- </label>
- </div>
- <div class="form-check">
- <input class="form-check-input" type="checkbox" value="1" id="flexCheck5">
- <label class="form-check-label" name="portfolio" for="flexCheck5">
- Portfolio
- </label>
- </div>
- <div class="form-check">
- <input class="form-check-input" type="checkbox" value="1" id="flexCheck6">
- <label class="form-check-label" name='contact' for="flexCheck6">
  Contact
  </label>
  </div>
