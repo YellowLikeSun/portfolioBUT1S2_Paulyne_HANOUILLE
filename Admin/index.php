@@ -1,10 +1,16 @@
+<?php
+$pdo = require '../Modele/connect.php';
+// execute a query
+$sql = 'SELECT * FROM navbarre';
+$statement = $pdo->query($sql);
+$user_data = $statement->fetch(PDO::FETCH_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> AdminLTE 3 | Dashboard</title>
-
+  <title> Back Office Paulyne Hanouille</title>
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -154,26 +160,31 @@
 
  <form method=”post” action=”update_section_visibility.php”>
  <div class="form-check">
- <input class="form-check-input" type="checkbox" value="1" id="flexCheck1">
- <label class="form-check-label" name="hiome” for="flexCheck1">
+ <input class="form-check-input" name="Accueil" type="checkbox" value="1" id="1">
+ <?php
+ if($user_data['navbarre']){
+  echo "checked";
+ }
+ ?>
+ <label class="form-check-label" name="text_nav" for="1"> 
  Accueil
  </label>
  </div>
  <div class="form-check">
- <input class="form-check-input" type="checkbox" value="1" id="flexCheck2">
- <label class="form-check-label" name="about" for="flexCheck2">
+ <input class="form-check-input" name="Compétences" type="checkbox" value="1" id="2">
+ <label class="form-check-label" name="text_nav" for="2">
  Compétences
  </label>
  </div>
  <div class="form-check">
- <input class="form-check-input" type="checkbox" value="1" id="flexCheck3">
- <label class="form-check-label" name="resume" for="flexCheck3">
+ <input class="form-check-input" name="Projets" type="checkbox" value="1" id="3">
+ <label class="form-check-label" name="text_nav" for="3">
  Projets
  </label>
  </div>
  <div class="form-check">
- <input class="form-check-input" type="checkbox" value="1" id="flexCheck4">
- <label class="form-check-label" name="services" for="flexCheck4">
+ <input class="form-check-input" name="Contact" type="checkbox" value="1" id="4">
+ <label class="form-check-label" name="text_nav" for="4">
  Contact
  </label>
  </div>
