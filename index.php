@@ -1,19 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-  <?php
-    require('Modele/connect.php');
-  if (!isset($_SESSION['isUserLoggedIn'])){
- echo "<script> window.location.href='./Admin/login.php' </script>";
- }
-
-  $pdo= require './Modele/connect.php';
-  $sql='SELECT * FROM  navbarre';
-  $statement = $pdo ->query($sql);
-  $data_nav=$statement->fetchAll(PDO::FETCH_ASSOC);
-   //print_r($data);
-   //exit; 
-  ?>
+  
 
   <head>
     <meta charset="UTF-8" />
