@@ -158,33 +158,48 @@ $user_data = $statement->fetch(PDO::FETCH_ASSOC);
  <!-- Small boxes (Stat box) -->
  <div class="row">
 
- <form method=”post” action=”update_section_visibility.php”>
+ <form method=”post” action=”../Controler/update_section_visibility.php”>
  <div class="form-check">
- <input class="form-check-input" name="Accueil" type="checkbox" value="1" id="1">
+ <input class="form-check-input" name="Accueil" type="checkbox" value="1" id="FlexCheck1">
  <?php
- if($user_data['navbarre']){
+ if($user_data['Accueil-section']){
   echo "checked";
  }
  ?>
- <label class="form-check-label" name="text_nav" for="1"> 
+ <label class="form-check-label"  for="FlexCheck1"> 
  Accueil
  </label>
  </div>
  <div class="form-check">
- <input class="form-check-input" name="Compétences" type="checkbox" value="1" id="2">
- <label class="form-check-label" name="text_nav" for="2">
+ <input class="form-check-input" name="Compétences" type="checkbox" value="1" id="FlexCheck2">
+ <?php
+ if($user_data['Compétences-section']){
+  echo "checked";
+ }
+ ?>
+ <label class="form-check-label"  for="FlexCheck2">
  Compétences
  </label>
  </div>
  <div class="form-check">
- <input class="form-check-input" name="Projets" type="checkbox" value="1" id="3">
- <label class="form-check-label" name="text_nav" for="3">
+ <input class="form-check-input" name="Projets" type="checkbox" value="1" id="FlexCheck3">
+ <?php
+ if($user_data['Projets-section']){
+  echo "checked";
+ }
+ ?>
+ <label class="form-check-label"  for="FlexCheck3">
  Projets
  </label>
  </div>
  <div class="form-check">
- <input class="form-check-input" name="Contact" type="checkbox" value="1" id="4">
- <label class="form-check-label" name="text_nav" for="4">
+ <input class="form-check-input" name="Contact" type="checkbox" value="1" id="FlexCheck4">
+ <?php
+ if($user_data['Contact-section']){
+  echo "checked";
+ }
+ ?>
+ <label class="form-check-label"  for="FlexCheck4">
  Contact
  </label>
  </div>
