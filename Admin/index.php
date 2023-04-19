@@ -122,11 +122,7 @@
         </div>
       </li>
       <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
-        
-          
       
-        
         <li class="nav-item">
           <a class="nav-link" href="../Controler/logout.php"> LogOut </a>
         </li>
