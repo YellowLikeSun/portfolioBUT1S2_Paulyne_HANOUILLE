@@ -206,31 +206,39 @@
         </div>
       </section>
     </main>
+     <?php
+        $pdo= require './Modele/connect.php';
+  $sql='SELECT * FROM footer';
+  $statement = $pdo ->query($sql);
+  $data_foot=$statement->fetch(PDO::FETCH_ASSOC);
+   //print_r($data_foot);
+   //exit; 
+  ?>
     <footer class="foot">
       <a href="https://twitter.com/YellowVLR"
         ><img
-          src="Img/logotwitter.png"
+          src="<?=$data_foot['logotwitwi']?>"
           width="60%"
           title="comptetwitter"
           alt="lien au compte twitter"
       /></a>
       <a href="instagram.com"
         ><img
-          src="Img/logoinstagram.png"
+          src="<?=$data_foot['logoinsta']?>"
           width="25%"
           title="compteinstagram"
           alt="lien au compte instagram"
       /></a>
       <a href="https://discord.gg/Djcr6VZaRn"
         ><img
-          src="Img/logodiscord.png"
+          src="<?=$data_foot['logodidi']?>"
           width="50%"
           title="serveurdiscord"
           alt="lien au serveur discord"
       /></a>
       <a href="linkedin.com"
         ><img
-          src="Img/LinkedIn.png"
+          src="<?=$data_foot['logolinkedin']?>"
           width="13%"
           title="comptelikedin"
           alt="lien au compte linkedin"
