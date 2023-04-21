@@ -1,10 +1,10 @@
 <?php
 $pdo = require('../Modele/connect.php');
 if(isset($_POST['update-section'])){
- $accueil=$_POST['Accueil'] ?? 0;
- $comp=$_POST['Compétences'] ?? 0;
- $projets=$_POST['Projets'] ?? 0;
- $contact=$_POST['Contact'] ?? 0;
+ $accueil=$_POST['Accueil'];
+ $comp=$_POST['Compétences'];
+ $projets=$_POST['Projets'];
+ $contact=$_POST['Contact'];
  $sql = "UPDATE section_control SET ";
  $sql .= "Accueil_section=$accueil,";
  $sql .= "Compétences_section=$comp,";
