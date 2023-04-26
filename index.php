@@ -238,7 +238,7 @@
           title="serveurdiscord"
           alt="lien au serveur discord"
       /></a>
-      <a href="linkedin.com"
+      <a href="https://www.linkedin.com/in/paulyne-hanouille-32a48a208/"
         ><img
           src="Img/<?=$data_foot['logolinkedin']?>"
           width="13%"
