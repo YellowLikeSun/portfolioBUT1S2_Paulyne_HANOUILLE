@@ -224,7 +224,7 @@
           title="comptetwitter"
           alt="lien au compte twitter"
       /></a>
-      <a href="instagram.com"
+      <a href="https://www.instagram.com/paulynehnl/"
         ><img
           src="Img/<?=$data_foot['logoinsta']?>"
           width="25%"
