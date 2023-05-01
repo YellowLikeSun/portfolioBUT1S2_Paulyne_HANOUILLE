@@ -210,7 +210,7 @@
                 $prenom = $_POST['prenom'];
                 $email = $_POST['email'];
                 $message = $_POST['message'];
-                $insertmess=$pdo->prepare("INSERT INTO mess (prenom, nom, email, messag)VALUE(?, ?, ?, ?)");
+                $insertmess=$pdo->prepare("INSERT INTO mess (prenom, nom, email, messag) VALUE (?, ?, ?, ?)");
                 $insertmess->execute([$nom, $prenom, $email, $message]);
               }
               ?>
