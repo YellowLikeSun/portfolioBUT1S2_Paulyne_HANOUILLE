@@ -1,9 +1,10 @@
 <?php
-$pdo = require '../Modele/connect.php';
+$pdo = require '../../modele/connect.php';
 // execute a query
-$sql = 'SELECT * FROM navbarre';
-$statement = $pdo->query($sql);
-$user_data = $statement->fetch(PDO::FETCH_ASSOC);
+
+$Query = $pdo->prepare('SELECT * FROM nav');
+$Query->execute();
+$user_data = $Query->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">
