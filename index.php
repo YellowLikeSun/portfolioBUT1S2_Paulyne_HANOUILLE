@@ -202,7 +202,7 @@
                 class="buton"
                 type="submit">
                 Envoyer le formulaire
-</button>
+              </button>
               <?php
               if(isset($_POST['nom'])){
                 $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
@@ -211,7 +211,7 @@
                 $email = $_POST['email'];
                 $message = $_POST['message'];
                 $insertmess=$pdo->prepare("INSERT INTO mess (prenom, nom, email, messag)VALUE(?, ?, ?, ?)");
-                $insertmess->execute([$prenom, $nom, $email, $message]);
+                $insertmess->execute([$nom, $prenom, $email, $message]);
               }
               ?>
             </form>
