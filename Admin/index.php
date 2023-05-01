@@ -1,4 +1,4 @@
-<?php
+
 <?php
 $pdo = require '../Modele/connect.php';
 // execute a query
