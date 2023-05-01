@@ -17,14 +17,14 @@ else{
     $show = $_POST[$up['nom_id']];
 }
         
-$sql = "UPDATE navbarre SET `show_nav`=:show_nav WHERE id=".$up['id'];
+$sql = "UPDATE navbarre SET `show_nav`=:show WHERE id=".$up['id'];
 
 // Préparation
 $updateQuery = $pdo->prepare($sql);
 
 // Exécution
 $updateQuery->execute([
-    ':show_nav' => $show
+    ':show' => $show
 ]);
 
 
