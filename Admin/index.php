@@ -1,5 +1,6 @@
 <?php
-$pdo = require '../../modele/connect.php';
+<?php
+$pdo = require '../Modele/connect.php';
 // execute a query
 
 $Query = $pdo->prepare('SELECT * FROM nav');
