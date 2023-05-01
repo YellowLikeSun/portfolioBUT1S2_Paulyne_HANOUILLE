@@ -113,6 +113,7 @@
    //exit; 
   ?>
         <h3 class="titre"><?=$data_proj['titre_projet']?></h3>
+        <p>test</p>
       
     <div class="styleprojet">
          <div> <h4 class="stprojet"> <?=$data_proj['titre_dw']?></h4> </div>
