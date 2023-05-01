@@ -4,7 +4,7 @@ require('../Modele/connect.php');
 $sqlQuery = 'SELECT * FROM navbarre';
 $Query = $pdo->prepare($sqlQuery);
 $Query->execute();
-$user_data = $Query->fetchAll();
+$user_data = $Query->fetch();
 
 
     foreach ($user_data as $up) {
