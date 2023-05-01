@@ -3,7 +3,7 @@
 $pdo = require '../Modele/connect.php';
 // execute a query
 
-$Query = $pdo->prepare('SELECT * FROM nav');
+$Query = $pdo->prepare('SELECT * FROM navbarre');
 $Query->execute();
 $user_data = $Query->fetchAll();
 ?>
