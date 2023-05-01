@@ -198,11 +198,11 @@
                   name="user_message"
                 ></textarea>
               </div>
-              <input
+              <button
                 class="buton"
-                type="submit formEntry"
-                value="Envoyer le formulaire"
-              />
+                type="submit formEntry">
+                Envoyer le formulaire
+</button>
               <?php
               if(isset($_POST['prenom'])){
                 $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
@@ -213,7 +213,6 @@
                 $insertmess=$pdo->prepare("INSERT INTO mess (prenom, nom, email, messag)VALUE(?, ?, ?, ?)");
                 $insertmess->execute([$prenom, $nom, $email, $message]);
               }
-              ?>
             </form>
           </div>
         </div>
