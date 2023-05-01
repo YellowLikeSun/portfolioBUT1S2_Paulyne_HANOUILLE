@@ -167,7 +167,7 @@
           </div>
 
           <div class="form">
-            <form action="/ma-page-de-traitement" method="post">
+            <form method="post">
               <div>
                 <label for="name">Nom :</label>
                 <input class="animform" type="text" id="nom" name="user_nom" />
@@ -182,7 +182,7 @@
                 />
               </div>
               <div>
-                <label for="mail">e-mail&nbsp;:</label>
+                <label for="mail">e-mail:</label>
                 <input
                   class="animform"
                   type="email"
