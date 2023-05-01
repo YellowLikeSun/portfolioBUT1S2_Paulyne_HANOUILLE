@@ -158,7 +158,7 @@ $user_data = $statement->fetch(PDO::FETCH_ASSOC);
  <!-- Small boxes (Stat box) -->
  <div class="row">
 
- <form method="post" action="../../controler/update_section_visibility.php">
+ <form method="post" action="../Controler/update_section_visibility.php">
   <?php
   if (!empty($user_data)) {
     foreach ($user_data as $nav) {
