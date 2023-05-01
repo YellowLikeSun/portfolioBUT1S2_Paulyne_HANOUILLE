@@ -1,10 +1,10 @@
 <?php
-require('../Modele/connect.php');
+$pdo = require '../Modele/connect.php';
+// execute a query
+$sql = 'SELECT * FROM navbarre';
+$statement = $pdo->query($sql);
+$user_data = $statement->fetchAll(PDO::FETCH_ASSOC);
 
-$sqlQuery = 'SELECT * FROM navbarre';
-$Query = $pdo->prepare($sqlQuery);
-$Query->execute();
-$user_data = $Query->fetch();
 
 
     foreach ($user_data as $up) {
