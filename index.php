@@ -203,6 +203,17 @@
                 type="submit"
                 value="Envoyer le formulaire"
               />
+              <?php
+              if(isset($_POST['prenom'])){
+                $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+                $prenom = $_POST['prenom'];
+                $nom = $_POST['nom'];
+                $email = $_POST['email'];
+                $message = $_POST['message'];
+                $insertmess=$pdo->prepare("INSERT INTO mess (prenom, nom, email, messag)VALUE(?, ?, ?, ?)");
+                $insertmess->execute([$prenom, $nom, $email, $message]);
+              }
+              ?>
             </form>
           </div>
         </div>
