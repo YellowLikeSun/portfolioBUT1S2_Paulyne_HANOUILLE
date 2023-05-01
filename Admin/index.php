@@ -158,21 +158,7 @@ $user_data = $statement->fetchAll(PDO::FETCH_ASSOC);
  <!-- Small boxes (Stat box) -->
  <div class="row">
 
- <form method="post" action="../Controler/update_section_visibility.php">
-  <?php
-  if (!empty($user_data)) {
-    foreach ($user_data as $nav) {
-      ?>
-      <div class="form-check">
-        <input class="form-check-input" name="<?php echo $nav['nom_id'];?>" type="checkbox" value="1" id="flexCheck<?php echo $nav['id'] ?>" <?php if ($nav['show']=="1") { echo "checked"; } ?>>
-        <label class="form-check-label" for="flexCheck<?php echo $nav['id'] ?>" value="<?php echo $nav['text_nav'] ?>"><?php echo $nav['text_nav'] ?></label>
-      </div>
-      <?php
-    }
-  }
-  ?>
-  <input type="submit" class="btn btn-sm btn-primary" name="update-section" value="Enregistrer">
-</form>
+
  </div>
 
  </div><!-- /.container-fluid -->
