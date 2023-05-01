@@ -200,7 +200,7 @@
               </div>
               <button
                 class="buton"
-                type="submit formEntry">
+                type="submit">
                 Envoyer le formulaire
 </button>
               <?php
