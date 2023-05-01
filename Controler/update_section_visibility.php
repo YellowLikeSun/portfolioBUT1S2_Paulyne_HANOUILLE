@@ -1,19 +1,38 @@
 <?php
-$pdo = require('../Modele/connect.php');
-if(isset($_POST['update-section'])){
- $accueil=$_POST['Accueil'];
- $comp=$_POST['Compétences'];
- $projets=$_POST['Projets'];
- $contact=$_POST['Contact'];
- $sql = "UPDATE section_control SET ";
- $sql .= "Accueil_section=$accueil,";
- $sql .= "Compétences_section=$comp,";
- $sql .= "Projets_section=$projets,";
- $sql .= "Contact_section=$contact,WHERE id=1";
- $statement = $pdo->query($sql);
- if($statement) {
- echo "<script> window.location.href='../admin/index.php';
-</script>";
- }
+require('../Modele/connect.php');
+
+$sqlQuery = 'SELECT * FROM nav';
+$Query = $pdo->prepare($sqlQuery);
+$Query->execute();
+$user_data = $Query->fetchAll();
+
+
+    foreach ($user_data as $up) {
+
+        if(empty($_POST[$up['nom_id']]))
+{
+    $show=0;
 }
+else{
+    $show = $_POST[$up['nom_id']];
+}
+        
+$sql = "UPDATE nav SET `show`=:show WHERE id=".$up['id'];
+
+// Préparation
+$updateQuery = $pdo->prepare($sql);
+
+// Exécution
+$updateQuery->execute([
+    ':show' => $show
+]);
+
+
+} 
+
+   
+
+
+ echo header('location:../Admin/index.php');
+ 
 ?>
