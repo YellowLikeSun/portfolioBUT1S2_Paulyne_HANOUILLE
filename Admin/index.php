@@ -165,7 +165,7 @@ $user_data = $statement->fetchAll(PDO::FETCH_ASSOC);
       ?>
       <div class="form-check">
         <input class="form-check-input" name="<?php echo $nav['nom_id'];?>" type="checkbox" value="1" id="flexCheck<?php echo $nav['id'] ?>" <?php if ($nav['show']=="1") { echo "checked"; } ?>>
-        <label class="form-check-label" for="flexCheck<?php echo $nav['id'] ?>" value="<?php echo $nav['text'] ?>"><?php echo $nav['text'] ?></label>
+        <label class="form-check-label" for="flexCheck<?php echo $nav['id'] ?>" value="<?php echo $nav['text_nav'] ?>"><?php echo $nav['text_nav'] ?></label>
       </div>
       <?php
     }
