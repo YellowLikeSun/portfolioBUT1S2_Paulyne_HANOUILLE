@@ -1,18 +1,20 @@
 
 <?php
-$pdo = require '../Modele/connect.php';
+$pdo = require '../../modele/connect.php';
 // execute a query
 
-$Query = $pdo->prepare('SELECT * FROM navbarre');
+$Query = $pdo->prepare('SELECT * FROM nav');
 $Query->execute();
 $user_data = $Query->fetchAll();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Back Office Paulyne Hanouille</title>
+  <title> Mon portfolio| Dashboard</title>
+
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -53,16 +55,11 @@ $user_data = $Query->fetchAll();
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-      
-    
       <!-- Notifications Dropdown Menu -->
-      
-        <li class="nav-item">
-          <a class="nav-link" href="../Controler/logout.php"> LogOut </a>
-        </li>
-          
-      
-     
+      <li class="nav-item">
+        <a class="nav-link" href="../../controler/logout.php"> Logout
+        </a>
+      </li>
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -110,9 +107,26 @@ $user_data = $Query->fetchAll();
                 <i class="right"></i>
               </p>
             </a>
-            
-          
-         
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Dashboard v1</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index2.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Dashboard v2</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index3.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Dashboard v3</p>
+                </a>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>
@@ -137,14 +151,30 @@ $user_data = $Query->fetchAll();
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.container-fluid -->
       <section class="content">
- <div class="container-fluid">
- <!-- Small boxes (Stat box) -->
- <div class="row">
-
- 
- </div>
+        <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+          <div class="row">
+          <form method="post" action="../Controler/update_section_visibility.php">
+  <?php
+  if (!empty($user_data)) {
+    foreach ($user_data as $nav) {
+      ?>
+      <div class="form-check">
+        <input class="form-check-input" name="<?php echo $nav['nom_id'];?>" type="checkbox" value="1" id="flexCheck<?php echo $nav['id'] ?>" <?php if ($nav['show']=="1") { echo "checked"; } ?>>
+        <label class="form-check-label" for="flexCheck<?php echo $nav['id'] ?>" value="<?php echo $nav['text'] ?>"><?php echo $nav['text'] ?></label>
+      </div>
+      <?php
+    }
+  }
+  ?>
+  <input type="submit" class="btn btn-sm btn-primary" name="update-section" value="Enregistrer">
+</form>
+          </div>
+        </div>
+      </section>
 
  </div><!-- /.container-fluid -->
 </section>
@@ -158,15 +188,8 @@ $user_data = $Query->fetchAll();
   </aside>
   <!-- /.control-sidebar -->
 </div>
-
 <!-- /.content-wrapper -->
-<footer class="main-footer">
-    <strong>Copyright &copy; 2014-2023 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.2.0
-    </div>
-  </footer>
+
 
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
@@ -198,8 +221,6 @@ $user_data = $Query->fetchAll();
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
 </body>
