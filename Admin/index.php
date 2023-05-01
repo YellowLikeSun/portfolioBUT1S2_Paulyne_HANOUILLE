@@ -3,7 +3,7 @@ $pdo = require '../Modele/connect.php';
 // execute a query
 $sql = 'SELECT * FROM navbarre';
 $statement = $pdo->query($sql);
-$user_data = $statement->fetchAll(PDO::FETCH_ASSOC);
+$user_data = $statement->fetch(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -158,7 +158,53 @@ $user_data = $statement->fetchAll(PDO::FETCH_ASSOC);
  <!-- Small boxes (Stat box) -->
  <div class="row">
 
-
+ <form method=”post” action=”../Controler/update_section_visibility.php”>
+ <div class="form-check">
+ <input class="form-check-input" name="Accueil" type="checkbox" value="1" id="FlexCheck1">
+ <?php
+ if($user_data['Accueil-section']){
+  echo "checked";
+ }
+ ?>
+ <label class="form-check-label"  for="FlexCheck1"> 
+ Accueil
+ </label>
+ </div>
+ <div class="form-check">
+ <input class="form-check-input" name="Compétences" type="checkbox" value="1" id="FlexCheck2">
+ <?php
+ if($user_data['Compétences-section']){
+  echo "checked";
+ }
+ ?>
+ <label class="form-check-label"  for="FlexCheck2">
+ Compétences
+ </label>
+ </div>
+ <div class="form-check">
+ <input class="form-check-input" name="Projets" type="checkbox" value="1" id="FlexCheck3">
+ <?php
+ if($user_data['Projets-section']){
+  echo "checked";
+ }
+ ?>
+ <label class="form-check-label"  for="FlexCheck3">
+ Projets
+ </label>
+ </div>
+ <div class="form-check">
+ <input class="form-check-input" name="Contact" type="checkbox" value="1" id="FlexCheck4">
+ <?php
+ if($user_data['Contact-section']){
+  echo "checked";
+ }
+ ?>
+ <label class="form-check-label"  for="FlexCheck4">
+ Contact
+ </label>
+ </div>
+ <input type="submit" class="btn btn-sm btn-primary" name="update-section" value="Save">
+ </form>
  </div>
 
  </div><!-- /.container-fluid -->
