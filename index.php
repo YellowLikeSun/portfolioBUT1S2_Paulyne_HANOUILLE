@@ -213,6 +213,7 @@
                 $insertmess=$pdo->prepare("INSERT INTO mess (prenom, nom, email, messag)VALUE(?, ?, ?, ?)");
                 $insertmess->execute([$prenom, $nom, $email, $message]);
               }
+              ?>
             </form>
           </div>
         </div>
