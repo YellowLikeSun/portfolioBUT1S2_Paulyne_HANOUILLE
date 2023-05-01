@@ -1,6 +1,6 @@
 
 <?php
-$pdo = require '../../modele/connect.php';
+$pdo = require '../Modele/connect.php';
 // execute a query
 
 $Query = $pdo->prepare('SELECT * FROM nav');
@@ -57,7 +57,7 @@ $user_data = $Query->fetchAll();
     <ul class="navbar-nav ml-auto">
       <!-- Notifications Dropdown Menu -->
       <li class="nav-item">
-        <a class="nav-link" href="../../controler/logout.php"> Logout
+        <a class="nav-link" href="../Controler/logout.php"> Logout
         </a>
       </li>
     </ul>
