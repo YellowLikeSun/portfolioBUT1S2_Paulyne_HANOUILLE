@@ -3,7 +3,7 @@ $pdo = require '../Modele/connect.php';
 // execute a query
 $sql = 'SELECT * FROM navbarre';
 $statement = $pdo->query($sql);
-$user_data = $statement->fetch(PDO::FETCH_ASSOC);
+$user_data = $statement->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -159,53 +159,30 @@ $user_data = $statement->fetch(PDO::FETCH_ASSOC);
  <div class="row">
 
  <form method=”post” action=”../Controler/update_section_visibility.php”>
+ 
+
+ <?php foreach ($user_data as $nav) {
+  # code...
+ ?>
  <div class="form-check">
- <input class="form-check-input" name="Accueil" type="checkbox" value="1" id="FlexCheck1">
+ <input class="form-check-input" name="<?php echo $nav['nom_id']?>" type="checkbox" value="1" id="<?php echo $nav['nom_id']?>"
  <?php
- if($user_data['Accueil-section']){
+ if($nav['show_nav']==1){
   echo "checked";
  }
  ?>
- <label class="form-check-label"  for="FlexCheck1"> 
+ >
+
+ <label class="form-check-label"  for="<?php echo $nav['nom_id']?>"> 
  Accueil
  </label>
  </div>
- <div class="form-check">
- <input class="form-check-input" name="Compétences" type="checkbox" value="1" id="FlexCheck2">
- <?php
- if($user_data['Compétences-section']){
-  echo "checked";
- }
- ?>
- <label class="form-check-label"  for="FlexCheck2">
- Compétences
- </label>
- </div>
- <div class="form-check">
- <input class="form-check-input" name="Projets" type="checkbox" value="1" id="FlexCheck3">
- <?php
- if($user_data['Projets-section']){
-  echo "checked";
- }
- ?>
- <label class="form-check-label"  for="FlexCheck3">
- Projets
- </label>
- </div>
- <div class="form-check">
- <input class="form-check-input" name="Contact" type="checkbox" value="1" id="FlexCheck4">
- <?php
- if($user_data['Contact-section']){
-  echo "checked";
- }
- ?>
- <label class="form-check-label"  for="FlexCheck4">
- Contact
- </label>
- </div>
+ 
+
  <input type="submit" class="btn btn-sm btn-primary" name="update-section" value="Save">
  </form>
  </div>
+ <?php }?>
 
  </div><!-- /.container-fluid -->
 </section>
@@ -259,8 +236,6 @@ $user_data = $statement->fetch(PDO::FETCH_ASSOC);
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
 </body>
