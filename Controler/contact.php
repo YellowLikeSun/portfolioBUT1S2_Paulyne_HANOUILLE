@@ -17,7 +17,7 @@
                 $insertmess->execute([$nom, $prenom, $email, $message]);
               }
 
-              header('location:../Admin/index.php');
+              header('location:../index.php');
 
               
               ?>
