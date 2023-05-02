@@ -170,7 +170,7 @@
           </div>
 
           <div class="form">
-            <form method="post" action="">
+            <form method="post" action="./Controler/contact.php">
               <div>
                 <label for="name">Nom :</label>
                 <input class="animform" type="text" id="nom" name="user_nom" />
@@ -190,7 +190,7 @@
                   class="animform"
                   type="email"
                   id="mail"
-                  name="user_mail"
+                  name="user_email"
                 />
               </div>
               <div>
@@ -206,17 +206,7 @@
                 type="submit">
                 Envoyer le formulaire
               </button>
-              <?php
-              if(isset($_POST['nom'])){
-                
-                $nom= $_POST['nom'];
-                $prenom = $_POST['prenom'];
-                $email = $_POST['email'];
-                $message = $_POST['message'];
-                $insertmess=$pdo->prepare("INSERT INTO mess (nom, prenom, email, messag) VALUE (?, ?, ?, ?)");
-                $insertmess->execute([$nom, $prenom, $email, $message]);
-              }
-              ?>
+             
             </form>
           </div>
         </div>
