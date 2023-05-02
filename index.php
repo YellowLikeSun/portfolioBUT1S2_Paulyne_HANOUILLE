@@ -137,8 +137,8 @@
              <br>
                       <div class="photo_ergo"> 
 
-                         <img src="Img/<?=$data_proj['int_pc']?>" alt="Interface UX ordinateur" width=600px> 
-                         <img src="Img/<?=$data_proj['int_tel']?>" alt="Interface UX telephone" width=200px> 
+                         <img class="bordure" src="Img/<?=$data_proj['int_pc']?>" alt="Interface UX ordinateur" width=600px> 
+                         <img class="bordure" src="Img/<?=$data_proj['int_tel']?>" alt="Interface UX telephone" width=200px> 
                         
                       </div>
  </section>
