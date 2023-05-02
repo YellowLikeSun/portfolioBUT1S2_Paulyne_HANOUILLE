@@ -158,14 +158,21 @@
  <?php
  }
  if($data_nav[3]['show_nav']==1){?>
+
       <section class="contact" id="contact">
-        <h3 class="titre">Contactez-moi</h3>
+      <?php
+        $pdo= require './Modele/connect.php';
+  $sql='SELECT * FROM contactez_moi';
+  $statement = $pdo ->query($sql);
+  $data_contact=$statement->fetch(PDO::FETCH_ASSOC);
+   //print_r($data_proj);
+   //exit; 
+  ?>
+        <h3 class="titre"><?=$data_contact['titre_contact']?></h3>
         <div class="wrapper2">
           <div>
             <p class="textcontact">
-              Je reste à votre disposition pour toutes autres informations ou
-              demande. N’hésitez pas à me contacter vie le formulaire ou par mes
-              réseaux sociaux.
+            <?=$data_contact['text_contactez_moi']?>
             </p>
           </div>
 

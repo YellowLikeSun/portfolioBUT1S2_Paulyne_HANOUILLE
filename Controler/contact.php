@@ -1,5 +1,4 @@
 <?php
-
         $nom= "";
         $prenom = "";
         $email = "";
@@ -18,6 +17,4 @@
               }
 
               header('location:../index.php');
-
-              
               ?>
