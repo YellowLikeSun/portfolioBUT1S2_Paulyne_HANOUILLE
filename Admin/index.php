@@ -158,7 +158,7 @@ $user_data = $statement->fetchAll(PDO::FETCH_ASSOC);
  <!-- Small boxes (Stat box) -->
  <div class="row">
 
- <form method=”post” action=”../Controler/update_section_visibility.php”>
+ <form method="post" action="../Controler/update_section_visibility.php">
  
 
  <?php foreach ($user_data as $nav) {
@@ -179,10 +179,12 @@ $user_data = $statement->fetchAll(PDO::FETCH_ASSOC);
  </div>
  
 
- <input type="submit" class="btn btn-sm btn-primary" name="update-section" value="Save">
+
  
- </div>
+
  <?php }?>
+ </div>
+ <input type="submit" class="btn btn-sm btn-primary" name="update-section" value="Save">
  </form>
  </div><!-- /.container-fluid -->
 </section>

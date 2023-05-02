@@ -56,6 +56,8 @@
   $data_acc=$statement->fetch(PDO::FETCH_ASSOC);
    //print_r($data_acc);
    //exit; 
+  
+  if($data_nav[0]['show_nav']==1){
   ?>
          <h1><?=$data_acc['titre']?> </h1>
           <h2 class="sous-titre">
@@ -75,7 +77,7 @@
             height="250"
           />
         </div>
-      </section>
+      </section> <?php }?>
 
       <section class="comp" id="competences">
      <?php
