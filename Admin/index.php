@@ -16,8 +16,6 @@ $user_data = $statement->fetch(PDO::FETCH_ASSOC);
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js%22%3E"></script>
-
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
   <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
@@ -160,21 +158,53 @@ $user_data = $statement->fetch(PDO::FETCH_ASSOC);
  <!-- Small boxes (Stat box) -->
  <div class="row">
 
- <form method="post" action="../Controler/update_section_visibility.php">
-  <?php
-  if (!empty($user_data)) {
-    foreach ($user_data as $nav) {
-      ?>
-      <div class="form-check">
-        <input class="form-check-input" name="<?php echo $nav['nom_id'];?>" type="checkbox" value="1" id="flexCheck<?php echo $nav['id'] ?>" <?php if ($nav['show_nav']=="1") { echo "checked"; } ?>>
-        <label class="form-check-label" for="flexCheck<?php echo $nav['id'] ?>" value="<?php echo $nav['text_nav'] ?>"><?php echo $nav['text_nav'] ?></label>
-      </div>
-      <?php
-    }
-  }
-  ?>
-  <input type="submit" class="btn btn-sm btn-primary" name="update-section" value="Enregistrer">
-</form>
+ <form method=”post” action=”../Controler/update_section_visibility.php”>
+ <div class="form-check">
+ <input class="form-check-input" name="Accueil" type="checkbox" value="1" id="FlexCheck1">
+ <?php
+ if($user_data['Accueil-section']){
+  echo "checked";
+ }
+ ?>
+ <label class="form-check-label"  for="FlexCheck1"> 
+ Accueil
+ </label>
+ </div>
+ <div class="form-check">
+ <input class="form-check-input" name="Compétences" type="checkbox" value="1" id="FlexCheck2">
+ <?php
+ if($user_data['Compétences-section']){
+  echo "checked";
+ }
+ ?>
+ <label class="form-check-label"  for="FlexCheck2">
+ Compétences
+ </label>
+ </div>
+ <div class="form-check">
+ <input class="form-check-input" name="Projets" type="checkbox" value="1" id="FlexCheck3">
+ <?php
+ if($user_data['Projets-section']){
+  echo "checked";
+ }
+ ?>
+ <label class="form-check-label"  for="FlexCheck3">
+ Projets
+ </label>
+ </div>
+ <div class="form-check">
+ <input class="form-check-input" name="Contact" type="checkbox" value="1" id="FlexCheck4">
+ <?php
+ if($user_data['Contact-section']){
+  echo "checked";
+ }
+ ?>
+ <label class="form-check-label"  for="FlexCheck4">
+ Contact
+ </label>
+ </div>
+ <input type="submit" class="btn btn-sm btn-primary" name="update-section" value="Save">
+ </form>
  </div>
 
  </div><!-- /.container-fluid -->
