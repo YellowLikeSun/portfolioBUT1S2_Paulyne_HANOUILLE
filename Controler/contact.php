@@ -1,5 +1,5 @@
 <?php
- require('Modele/connect.php');
+ require('../Modele/connect.php');
   
 
               if(isset($_POST['nom'])){

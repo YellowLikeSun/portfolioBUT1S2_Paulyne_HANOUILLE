@@ -172,11 +172,11 @@
           <div class="form">
             <form method="post" action="./Controler/contact.php">
               <div>
-                <label for="name">Nom :</label>
+                <label for="nom">Nom :</label>
                 <input class="animform" type="text" id="nom" name="user_nom" />
               </div>
               <div>
-                <label for="name">Prénom :</label>
+                <label for="prenom">Prénom :</label>
                 <input
                   class="animform"
                   type="text"
