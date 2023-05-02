@@ -157,7 +157,7 @@
       </section>
  <?php
  }
- if($data_nav[0]['show_nav']==1){?>
+ if($data_nav[3]['show_nav']==1){?>
       <section class="contact" id="contact">
         <h3 class="titre">Contactez-moi</h3>
         <div class="wrapper2">
@@ -170,7 +170,7 @@
           </div>
 
           <div class="form">
-            <form method="post">
+            <form method="post" action="">
               <div>
                 <label for="name">Nom :</label>
                 <input class="animform" type="text" id="nom" name="user_nom" />
