@@ -150,6 +150,8 @@ p {
 .photo_pp{
   display:flex;
   justify-content: space-evenly;
+}
+.bordure{
   border: blueviolet solid 5px;
 }
 
