@@ -77,7 +77,10 @@
             height="250"
           />
         </div>
-      </section> <?php }?>
+      </section> <?php }
+      if($data_nav[1]['show_nav']==1){
+      
+      ?>
 
       <section class="comp" id="competences">
      <?php
@@ -100,7 +103,7 @@
             </p>
           </div>
         </div>
-      </section>
+      </section><?php }?>
 <?php
  if($data_nav[2]['show_nav']==1){
 
@@ -156,7 +159,7 @@
       </section>
  <?php
  }
- ?>
+ if($data_nav[0]['show_nav']==1){?>
       <section class="contact" id="contact">
         <h3 class="titre">Contactez-moi</h3>
         <div class="wrapper2">
@@ -220,7 +223,7 @@
           </div>
         </div>
       </section>
-    </main>
+    </main><?php }?>
      
     <footer class="foot">
     <?php
