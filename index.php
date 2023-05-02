@@ -170,7 +170,7 @@
           </div>
 
           <div class="form">
-            <form method="post" action="./Controler/contact.php">
+            <form method="post" action="Controler/contact.php">
               <div>
                 <label for="nom">Nom :</label>
                 <input class="animform" type="text" id="nom" name="user_nom" />
