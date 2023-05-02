@@ -12,5 +12,13 @@
                 $insertmess->execute([$nom, $prenom, $email, $message]);
               }
 
+              echo $nom.'<br><br>';
+              echo $prenom.'<br><br>';
+              echo $email.'<br><br>';
+              echo $message.'<br><br>';
+
+              if(!$insertmess){
+                echo "Erreur d'envoi"
+              }
               
               ?>
