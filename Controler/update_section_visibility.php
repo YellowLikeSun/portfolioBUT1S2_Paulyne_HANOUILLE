@@ -33,6 +33,6 @@ $updateQuery->execute([
    
 
 
- echo header('location:../Admin/index.php');
+ header('location:../Admin/index.php');
  
 ?>
