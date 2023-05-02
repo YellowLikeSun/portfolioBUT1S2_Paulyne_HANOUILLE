@@ -123,8 +123,8 @@
        <div><p class="textdevweb"><?=$data_proj['text_dw']?></p></div>
        
     
-             <a class="lienportfolio" href="<?=$data_proj['lienwp']?>"> Accèdez à la carte de restaurant </a>
-             <a class="lienportfolio" href="<?=$data_proj['lienbp']?>"> Accèdez au blog sur les jeux vidéo </a>
+             <a class="lienportfolio" href="<?=$data_proj['lienwp']?>"> Accéder à la carte de restaurant </a>
+             <a class="lienportfolio" href="<?=$data_proj['lienbp']?>"> Accéder au blog sur les jeux vidéo </a>
  <div>
  </section>
  <section> 
