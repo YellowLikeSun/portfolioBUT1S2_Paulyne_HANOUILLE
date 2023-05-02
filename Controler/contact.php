@@ -18,7 +18,7 @@
               echo $message.'<br><br>';
 
               if(!$insertmess){
-                echo "Erreur d'envoi"
+                echo "Erreur d'envoi";
               }
               
               ?>
