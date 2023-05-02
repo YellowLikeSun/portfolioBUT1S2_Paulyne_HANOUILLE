@@ -1,8 +1,13 @@
 <?php
+
+        $nom= "";
+        $prenom = "";
+        $email = "";
+        $message = "";
  require('../Modele/connect.php');
   
 
-              if(isset($_POST['nom'])){
+              if(isset($_POST['user_nom'])){
                 
                 $nom= $_POST['user_nom'];
                 $prenom = $_POST['user_prenom'];
