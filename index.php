@@ -4,9 +4,7 @@
 <?php
  
  require('Modele/connect.php');
-   if (!isset($_SESSION['isUserLoggedIn'])){
-  echo "<script> window.location.href='./Admin/login.php' </script>";
-  }
+  
  
   $pdo= require './Modele/connect.php';
   $sql='SELECT * FROM  navbarre';
@@ -223,7 +221,8 @@
           </div>
         </div>
       </section>
-    </main><?php }?>
+      <?php }?>
+    </main>
      
     <footer class="foot">
     <?php
