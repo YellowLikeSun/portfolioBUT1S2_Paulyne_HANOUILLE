@@ -174,16 +174,16 @@ $user_data = $statement->fetchAll(PDO::FETCH_ASSOC);
  >
 
  <label class="form-check-label"  for="<?php echo $nav['nom_id']?>"> 
- Accueil
+ <?php echo $nav['text_nav']?>
  </label>
  </div>
  
 
  <input type="submit" class="btn btn-sm btn-primary" name="update-section" value="Save">
- </form>
+ 
  </div>
  <?php }?>
-
+ </form>
  </div><!-- /.container-fluid -->
 </section>
     </div>
