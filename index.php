@@ -90,7 +90,6 @@
    //exit;
     ?>
         <h3 class="titre"> <?=$data_comp['titre_comp']?></h3>
-        <img src="<?='Img/'.$data_comp['lapin']?>" width="400" alt="" />
 
         <div class="stylcomp">
           <div classe="imgcomp">
