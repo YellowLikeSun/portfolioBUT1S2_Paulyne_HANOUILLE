@@ -94,6 +94,7 @@
         <div class="stylcomp">
           <div classe="imgcomp">
             <img src="<?='Img/'.$data_comp['img_comp']?>" width="400" alt="" />
+            <img src="<?='Img/'.$data_comp['lapin']?>" width="400" alt="" />
           </div>
 
           <div>
